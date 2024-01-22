@@ -23,17 +23,20 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 11. Measure RPM.
 
 ## Hardware
-1. ATtiny13 microcontroller.
-2. HC-05 Bluetooth module (https://components101.com/wireless/hc-05-bluetooth-module).
-3. A1120LUA-T Hall sensor.
-4. 2 X Ceramic capacitor 100 nF.
-5. 2 X Resistor 1 k.
-6. Resistor 2 k.
-7. Resistor 10 k.
-8. NdFeB magnet Ø10x0.6mm N35 (not shown in schematic).
+1. Artix 7 35T Arty FPGA Development Board.
+2. Electret microphone.
+3. LM358P op-amp.
+4. 10k resistor X 2.
+5. 51k resistor X 4.
+6. 300k resistor.
+7. 3.3k resistor.
+8. 1k resistor.
+9. 5.1k resistor.
+10. 100k potentiometer.
+11. 1u capacitor.
 
 <div align="center">
-  <img src="https://github.com/dariusur/BlueTachometer/blob/main/misc/schematics/BlueTachometer_schematic.png">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/external_circuit_schematic.png">
 </div>
 <div align="center">
   <i>Fig. 2. BlueTachometer schematic.</i>
@@ -53,12 +56,6 @@ This project consists of three parts:
   <i>Fig. 3. MCU program flowchart.</i>
 </div>
 <br></br>
-<div align="center">
-  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/external_circuit_schematic.png">
-</div>
-<div align="center">
-  <i>Fig. 4. Measurement algorithm shown on Hall sensor Vout signal captured with an oscilloscope.</i>
-</div>
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/internal_circuit_block_diagram.png">
 </div>
