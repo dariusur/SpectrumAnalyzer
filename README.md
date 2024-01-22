@@ -25,7 +25,7 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 ## Hardware
 1. Artix 7 35T Arty FPGA Development Board.
 2. Electret microphone.
-3. LM358P op-amp.
+3. LM358P op-amp X 2.
 4. 10k resistor X 2.
 5. 51k resistor X 4.
 6. 300k resistor.
