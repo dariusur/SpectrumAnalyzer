@@ -39,7 +39,7 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/external_circuit_schematic.png">
 </div>
 <div align="center">
-  <i>Fig. 2. BlueTachometer schematic.</i>
+  <i>Fig. 2. SpectrumAnalyzer external circuit schematic.</i>
 </div>
 
 ## How it works?
