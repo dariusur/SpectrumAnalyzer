@@ -1,5 +1,5 @@
 # SpectrumAnalyzer
-BlueTachometer is a wireless hall sensor based tachometer that transmits measured RPM (revolutions per minute) via Bluetooth to PC. A Python script called "DataVisualizer" is used to plot incoming data from the tachometer (Fig. 1). After the measurement session is complete, the collected data can be saved in .csv format.
+SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures the magnitude of an input audio signal versus frequency. The sound waves are converted into an electrical signal via a microphone and then sampled by the FPGA. The sampled data is used to perform Discrete Fourier Transform (DFT) which converts a time domain audio signal into frequency domain. At the end, the processed data is sent to PC via USB and displayed on screen with the help of a Python script.
 
 <div align="center">
   <img src="https://github.com/dariusur/BlueTachometer/blob/main/misc/screenshots/Fidget_spinner.png">
@@ -7,6 +7,12 @@ BlueTachometer is a wireless hall sensor based tachometer that transmits measure
 <div align="center">
   <i>Fig. 1. DataVisualizer Python script showing RPM measurement of a fidget spinner.</i>
 </div>
+
+This project consists of three parts: 
+1. External hardware.
+2. Internal hardware.
+3. Software.
+
 
 ## Installation
 1. Assemble the circuit.
