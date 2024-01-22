@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/Vivado/ROM_FFT_UART/ROM_FFT_UART.sim/sim_1/synth/func/xsim/TB_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMORY
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-311] analyzing module UART_TX
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/Vivado/ROM_FFT_UART/ROM_FFT_UART.srcs/sim_1/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB

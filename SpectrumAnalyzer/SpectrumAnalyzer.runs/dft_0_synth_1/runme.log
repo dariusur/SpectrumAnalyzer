@@ -1,0 +1,393 @@
+
+*** Running vivado
+    with args -log dft_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dft_0.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source dft_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Darius/Desktop/Vivado/debouncer/debouncer.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: dft_0
+Command: synth_design -top dft_0 -part xc7a35ticsg324-1L -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14860
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1203.523 ; gain = 407.293
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'dft_0' [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/synth/dft_0.vhd:77]
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_COMPONENT_NAME bound to: dft_0 - type: string 
+	Parameter C_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter C_SIZE_5G bound to: 0 - type: integer 
+	Parameter C_SIZE_1536 bound to: 0 - type: integer 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_FMAX bound to: 307 - type: integer 
+INFO: [Synth 8-3491] module 'dft_v4_2_3' declared at 'c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/hdl/dft_v4_2_vh_rfs.vhd:26120' bound to instance 'U0' of component 'dft_v4_2_3' [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/synth/dft_0.vhd:143]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'dft_0' (0#1) [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/synth/dft_0.vhd:77]
+WARNING: [Synth 8-7129] Port SCLR in module output_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module input_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module coefmem_tables is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SEL[phase][10] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SEL[phase][9] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SEL[n4][2] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][11] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][10] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][9] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][8] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][7] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][6] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][5] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][4] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][3] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][2] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][1] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[N][0] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[M][3] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[M][2] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[M][1] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[M][0] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[P][2] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[P][1] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[P][0] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[Q][1] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TABLE[Q][0] in module coefficient_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[3][re][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[2][re][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[1][re][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port READ_DATA[0][re][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_ADDR[3][9] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_ADDR[2][9] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_ADDR[1][9] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_ADDR[0][9] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[3][re][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][im][12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][re][17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][re][16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WRITE_DATA[2][re][15] in module data_memory is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1409.184 ; gain = 612.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1409.184 ; gain = 612.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1409.184 ; gain = 612.953
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.340 . Memory (MB): peak = 1413.883 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 83 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/dft_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.gen/sources_1/ip/dft_0/dft_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.runs/dft_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.runs/dft_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1494.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 83 instances were transformed.
+  DSP48E => DSP48E1: 16 instances
+  MUXF5 => LUT3: 36 instances
+  MUXF6 => LUT3: 24 instances
+  RAMB16 => RAMB36E1: 3 instances
+  RAMB18SDP => RAMB18E1: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.169 . Memory (MB): peak = 1494.766 ; gain = 0.359
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.runs/dft_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+DSP Debug: Collapsed multipler of size 8, multiple = 3
+INFO: [Synth 8-802] inferred FSM for state register 'dft_state_reg' in module 'control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 st_wait |                            10001 |                            00000
+               st_input1 |                            10011 |                            00001
+               st_input2 |                            01110 |                            00010
+               st_input3 |                            01011 |                            00011
+    st_input4_run_r4_4pt |                            01100 |                            00101
+        st_wait_r4_4pt_2 |                            11000 |                            00110
+        st_wait_r4_4pt_3 |                            10110 |                            00111
+        st_wait_r4_4pt_4 |                            10111 |                            01000
+        st_input4_run_r4 |                            01101 |                            00100
+          st_run_wait_r4 |                            01010 |                            01010
+       st_run_r4_output1 |                            01001 |                            10010
+               st_run_r4 |                            10101 |                            01001
+       st_run_r2_output1 |                            01000 |                            10011
+               st_run_r2 |                            00111 |                            01011
+          st_run_wait_r2 |                            00110 |                            01100
+               st_run_r5 |                            00011 |                            01101
+          st_run_wait_r5 |                            00000 |                            01110
+              st_output1 |                            00001 |                            10100
+               st_run_r3 |                            00101 |                            01111
+          st_run_wait_r3 |                            01111 |                            10000
+              st_output2 |                            00010 |                            10101
+              st_output3 |                            10100 |                            10110
+              st_output4 |                            10000 |                            10111
+              st_output5 |                            10010 |                            11000
+       st_run_r3_output1 |                            00100 |                            10001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dft_state_reg' using encoding 'sequential' in module 'control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i/control_u/findAddrA_u/gen_counter_v5.idx_counter_u/idx_phase35' (counter_M) to 'U0/i_synth/i/control_u/findAddrA_u/gen_counter_v5.idx_counter_u/idx_r35'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |DSP48E        |        16|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |DSP48E_bbox   |     1|
+|2     |DSP48E_bbox_4 |     3|
+|5     |DSP48E_bbox   |     1|
+|6     |DSP48E_bbox_5 |     5|
+|11    |DSP48E_bbox   |     1|
+|12    |DSP48E_bbox_6 |     1|
+|13    |DSP48E_bbox   |     1|
+|14    |DSP48E_bbox_7 |     1|
+|15    |DSP48E_bbox   |     1|
+|16    |DSP48E_bbox_8 |     1|
+|17    |CARRY4        |   263|
+|18    |LUT1          |    58|
+|19    |LUT2          |   672|
+|20    |LUT3          |  1216|
+|21    |LUT4          |   625|
+|22    |LUT5          |   404|
+|23    |LUT6          |   721|
+|24    |MUXF6         |    24|
+|25    |MUXF7         |     6|
+|26    |RAMB16        |     3|
+|27    |RAMB18SDP     |     4|
+|28    |SRL16E        |   402|
+|29    |SRLC32E       |    48|
+|30    |FDRE          |  4099|
+|31    |FDSE          |    50|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1360 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 1494.766 ; gain = 612.953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1494.766 ; gain = 698.535
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 1494.766 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 316 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1494.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 47 instances were transformed.
+  DSP48E => DSP48E1: 16 instances
+  MUXF6 => LUT3: 24 instances
+  RAMB16 => RAMB36E1: 3 instances
+  RAMB18SDP => RAMB18E1: 4 instances
+
+Synth Design complete, checksum: 2bc461d6
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1494.766 ; gain = 1074.855
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.runs/dft_0_synth_1/dft_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP dft_0, cache-ID = 9314863a7fffff7c
+INFO: [Coretcl 2-1174] Renamed 459 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_2/DFT_TEST_2.runs/dft_0_synth_1/dft_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dft_0_utilization_synth.rpt -pb dft_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  6 16:03:23 2024...

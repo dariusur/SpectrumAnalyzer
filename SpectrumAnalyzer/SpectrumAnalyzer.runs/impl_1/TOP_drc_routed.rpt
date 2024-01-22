@@ -1,0 +1,147 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon Jan 22 13:44:30 2024
+| Host         : DESKTOP-7B2FBLM running 64-bit major release  (build 9200)
+| Command      : report_drc -file TOP_drc_routed.rpt -pb TOP_drc_routed.pb -rpx TOP_drc_routed.rpx
+| Design       : TOP
+| Device       : xc7a35ticsg324-1L
+| Speed File   : -1L
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 22
++--------+----------+-------------------------------------------------------------------+------------+
+| Rule   | Severity | Description                                                       | Violations |
++--------+----------+-------------------------------------------------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining                                                  | 6          |
+| AVAL-4 | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 16         |
++--------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AI_X_CI_DSP48/DSP_V5.DSP input FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AI_X_CI_DSP48/DSP_V5.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AR_X_CI_DSP48/DSP_V5.DSP input FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AR_X_CI_DSP48/DSP_V5.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP FSM_DFT_UART/modulus/re_err_square_reg input FSM_DFT_UART/modulus/re_err_square_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP FSM_DFT_UART/modulus/re_err_square_reg input FSM_DFT_UART/modulus/re_err_square_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP FSM_DFT_UART/modulus/re_im_err_square_reg input FSM_DFT_UART/modulus/re_im_err_square_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP FSM_DFT_UART/modulus/re_im_err_square_reg input FSM_DFT_UART/modulus/re_im_err_square_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_0/AI_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_0/AI_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_0/AR_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#4 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_0/AR_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#5 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_1/AI_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#6 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_1/AI_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#7 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_1/AR_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#8 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_1/AR_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#9 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AI_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#10 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AI_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#11 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AR_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#12 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_2/AR_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#13 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_3/AI_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#14 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_3/AI_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#15 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_3/AR_X_CI_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#16 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+FSM_DFT_UART/DFT/U0/i_synth/i/butterfly_u/TWIDDLE_MULT/TWIDDLE_MULT_3/AR_X_CR_DSP48/DSP_V5.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+

@@ -1,0 +1,422 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Jan 22 13:42:32 2024
+# Process ID: 15528
+# Current directory: C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/TOP.vds
+# Journal file: C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1\vivado.jou
+# Running On: DESKTOP-7B2FBLM, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+source TOP.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Darius/Desktop/Vivado/debouncer/debouncer.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/utils_1/imports/synth_1/MEMORY.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/utils_1/imports/synth_1/MEMORY.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top TOP -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6404
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1206.418 ; gain = 408.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/TOP.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer_0' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/debouncer_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer_0' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/debouncer_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FSM_ADC' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_ADC.v:12]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'RWM_ADC' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/RMW_ADC.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RWM_ADC' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/RMW_ADC.v:6]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_ADC.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'FSM_ADC' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_ADC.v:12]
+INFO: [Synth 8-6157] synthesizing module 'FSM_DFT_UART' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_DFT_UART.v:18]
+INFO: [Synth 8-6157] synthesizing module 'dft_0' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/dft_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dft_0' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/dft_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'RWM_DFT' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/RWM_DFT.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RWM_DFT' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/RWM_DFT.v:6]
+INFO: [Synth 8-6157] synthesizing module 'modulus' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/modulus.v:27]
+INFO: [Synth 8-6157] synthesizing module 'cordic_0' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/cordic_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_0' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/.Xil/Vivado-15528-DESKTOP-7B2FBLM/realtime/cordic_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'modulus' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/modulus.v:27]
+INFO: [Synth 8-6157] synthesizing module 'data_multiplexer' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/data_multiplexer.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'data_multiplexer' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/data_multiplexer.v:18]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/imports/new/UART_TX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/imports/new/UART_TX.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_DFT_UART.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'FSM_DFT_UART' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/FSM_DFT_UART.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'TOP' (0#1) [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/TOP.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1298.016 ; gain = 500.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1298.016 ; gain = 500.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1298.016 ; gain = 500.547
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1298.016 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/debouncer_0/debouncer_0/debouncer_0_in_context.xdc] for cell 'start_debouncer'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/debouncer_0/debouncer_0/debouncer_0_in_context.xdc] for cell 'start_debouncer'
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/debouncer_0/debouncer_0/debouncer_0_in_context.xdc] for cell 'reset_debouncer'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/debouncer_0/debouncer_0/debouncer_0_in_context.xdc] for cell 'reset_debouncer'
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/dft_0/dft_0/dft_0_in_context.xdc] for cell 'FSM_DFT_UART/DFT'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/dft_0/dft_0/dft_0_in_context.xdc] for cell 'FSM_DFT_UART/DFT'
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'FSM_DFT_UART/modulus/CORDIC'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'FSM_DFT_UART/modulus/CORDIC'
+Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'FSM_ADC/ADC'
+Finished Parsing XDC File [c:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'FSM_ADC/ADC'
+Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/constrs_1/imports/digilent-xdc-master/Arty-A7-35-Master.xdc]
+Finished Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/constrs_1/imports/digilent-xdc-master/Arty-A7-35-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/constrs_1/imports/digilent-xdc-master/Arty-A7-35-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1358.086 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1358.086 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'FSM_DFT_UART/modulus/CORDIC' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for reset_debouncer. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for start_debouncer. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FSM_DFT_UART/DFT. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FSM_DFT_UART/modulus/CORDIC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FSM_ADC/ADC. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM_ADC'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_TX'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM_DFT_UART'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TOP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   READY |                               00 |                               00
+          STORE_ADC_DATA |                               01 |                               01
+         SEND_FIRST_DATA |                               10 |                               10
+               SEND_DATA |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FSM_ADC'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     RDY |                              001 |                               00
+                LOAD_BIT |                              010 |                               01
+                SEND_BIT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'UART_TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   READY |                              000 |                              000
+          DFT_CONFIG_MEM |                              001 |                              001
+       DFT_WAIT_FOR_DATA |                              010 |                              010
+          DFT_STORE_DATA |                              011 |                              011
+           UART_SEND_BLK |                              100 |                              100
+           UART_WAIT_BLK |                              101 |                              101
+           UART_SEND_MOD |                              110 |                              110
+           UART_WAIT_MOD |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FSM_DFT_UART'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 START_0 |                              001 |                               00
+                 START_1 |                              010 |                               01
+                 START_2 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'TOP'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	              14K Bit	(1200 X 12 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input   14 Bit        Muxes := 1     
+	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   4 Input   11 Bit        Muxes := 1     
+	   8 Input   11 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   8 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 7     
+	   8 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 're_im_err_square_reg' and it is trimmed from '24' to '23' bits. [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/modulus.v:48]
+WARNING: [Synth 8-3936] Found unconnected internal register 're_err_square_reg' and it is trimmed from '24' to '23' bits. [C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.srcs/sources_1/new/modulus.v:46]
+DSP Report: Generating DSP re_err_square_reg, operation Mode is: (A*B)'.
+DSP Report: register re_err_square_reg is absorbed into DSP re_err_square_reg.
+DSP Report: operator re_err_square0 is absorbed into DSP re_err_square_reg.
+DSP Report: Generating DSP re_im_err_square_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register re_im_err_square_reg is absorbed into DSP re_im_err_square_reg.
+DSP Report: register im_err_square_reg is absorbed into DSP re_im_err_square_reg.
+DSP Report: operator re_im_err_square0 is absorbed into DSP re_im_err_square_reg.
+DSP Report: operator im_err_square0 is absorbed into DSP re_im_err_square_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|TOP         | FSM_ADC/RWM/mem_reg         | 1 K x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|TOP         | FSM_DFT_UART/RWM/mem_re_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|TOP         | FSM_DFT_UART/RWM/mem_im_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|modulus     | (A*B)'         | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|modulus     | (PCIN+(A*B)')' | 12     | 12     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.395 ; gain = 561.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|TOP         | FSM_ADC/RWM/mem_reg         | 1 K x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|TOP         | FSM_DFT_UART/RWM/mem_re_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|TOP         | FSM_DFT_UART/RWM/mem_im_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance FSM_ADC/RWM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FSM_DFT_UART/RWM/mem_re_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FSM_DFT_UART/RWM/mem_im_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1367.332 ; gain = 569.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|modulus     | (A*B)'         | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|modulus     | (PCIN+(A*B)')' | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |debouncer_0   |         2|
+|2     |xadc_wiz_0    |         1|
+|3     |dft_0         |         1|
+|4     |cordic_0      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |cordic      |     1|
+|2     |debouncer   |     1|
+|3     |debouncer_0 |     1|
+|4     |dft         |     1|
+|5     |xadc_wiz    |     1|
+|6     |BUFG        |     1|
+|7     |CARRY4      |     4|
+|8     |DSP48E1     |     2|
+|10    |LUT1        |     3|
+|11    |LUT2        |     6|
+|12    |LUT3        |    11|
+|13    |LUT4        |    26|
+|14    |LUT5        |    23|
+|15    |LUT6        |    31|
+|16    |MUXF7       |     1|
+|17    |RAMB36E1    |     3|
+|19    |FDRE        |   115|
+|20    |FDSE        |     6|
+|21    |IBUF        |     5|
+|22    |OBUF        |     1|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1367.852 ; gain = 509.004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.852 ; gain = 570.383
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1375.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1375.941 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 7f3b4547
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1375.941 ; gain = 956.680
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/SpectrumAnalyzer/SpectrumAnalyzer.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 22 13:43:08 2024...

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../DFT_TEST_3.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" \
+
+nosort

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../DFT_TEST_2.gen/sources_1/ip/dft_0/sim/dft_0.vhd" \
+
+nosort

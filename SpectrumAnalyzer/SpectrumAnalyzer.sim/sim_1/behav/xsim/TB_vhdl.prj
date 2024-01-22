@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../DFT_TEST_4.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" \
+"../../../../DFT_TEST_4.gen/sources_1/ip/dft_0/sim/dft_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.gen/sources_1/ip/debouncer_0/sources_1/new/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.gen/sources_1/ip/debouncer_0/sim/debouncer_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/FSM_ADC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM_ADC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/FSM_DFT_UART.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM_DFT_UART
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/RMW_ADC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RWM_ADC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/RWM_DFT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RWM_DFT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/imports/new/UART_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/post_processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module post_processor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sources_1/new/router.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module router
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Darius/Desktop/coding_stuff/projects_for_resume/SpectrumAnalyzer/Vivado/DFT_TEST_4/DFT_TEST_4.srcs/sim_1/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
