@@ -73,16 +73,10 @@ DataVisualizer script uses 4 libraries:
 Firstly, the script tries to open a serial port over Bluetooth to receive data from HC-05. If it succeeds, then the graph is configured (figure, labels, grid, etc). After that, an empty graph is displayed, and the script enters a loop and waits for data. The received data is converted to RPM and displayed on screen. Finally, after closing the figure window (click X), the script asks if data should be saved to .csv.
 
 ## Specifications
-* RPM measurement range: 0.017 to 9000000 RPM.
+* Frequency measurement range: 36.84 to 22105 Hz.
+* Resolution: 36.84 Hz.
+* Data rate: 30??? data frames per second (3 Mbits/s).
 
-|Resolution|RPM|
-|---|---|
-|<5|18972|
-|<1|8486|
-|<0.5|6000|
-|<0.1|2683|
-
-* Data rate = 125 samples per second (5000 bits/s)
 
 Resolution depends on CPU clock frequency (1.2 MHz). The greater the frequency, the larger RPM values can be measured, but at a cost of resolution. This characteristic is illustrated in Fig. 5. The graph shows that there are two limits, one is the $f_{cpu}$ limit, which represents the greatest possible RPM value that can be measured. This limit could only be reached if MCU would perform the measurement on every clock cycle. However, instructions take time to execute, and in worst case scenario it takes 4 clock cycles to perform the measurement. This brings us to the other, measurement algorithm limit, which represents the greatest RPM value that the MCU can actually measure. Even though it is possible to measure up to 9000000 RPM, the resolution is so bad that the error is in the order of 100000s of RPM. In addition, there is one more limit which is not shown, which is the 32 bit timer limit, which sets the lowest possible RPM value that can be measured, which is 0.017.
 
