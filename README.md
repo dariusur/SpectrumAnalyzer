@@ -2,7 +2,7 @@
 SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures the magnitude of an input audio signal versus frequency. The sound waves are converted into an electrical signal via a microphone and then sampled by the FPGA. The sampled data is used to perform Discrete Fourier Transform (DFT) which converts a time domain audio signal into frequency domain. At the end, the processed data is sent to PC via USB and displayed on screen with the help of a Python script.
 
 <div align="center">
-  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/images/prototype.png">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/images/prototype.png widht=50% height=50%">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/images/graph.png">
 </div>
 <div align="center">
