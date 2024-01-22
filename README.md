@@ -53,14 +53,14 @@ This project consists of three parts:
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/dataflow_diagram.png">
 </div>
 <div align="center">
-  <i>Fig. 3. MCU program flowchart.</i>
+  <i>Fig. 3. Data flow block diagram.</i>
 </div>
 <br></br>
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/internal_circuit_block_diagram.png">
 </div>
 <div align="center">
-  <i>Fig. 4. Measurement algorithm shown on Hall sensor Vout signal captured with an oscilloscope.</i>
+  <i>Fig. 4. Internal circuit block diagram.</i>
 </div>
 
 ### DataVisualizer
