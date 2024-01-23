@@ -10,17 +10,14 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 </div>
 
 ## Installation
-1. Assemble the circuit.
-2. Download and extract the repository ZIP file.
-3. Program the microcontroller using Microchip Studio.
-4. Configure HC-05 Bluetooth module: Slave mode, 9600 baud rate (default settings).
-5. Create a Python virtual environment that satisfies the requirements found in **DataVisualizer/requirements.txt**.
-6. Attach a magnet to a rotating object to be measured.
-7. Power up the tachometer.
-8. Switch on Bluetooth on your PC and pair it with HC-05.
-9. In the DataVisualizer Python script, configure the COM_PORT and SAVE_DIRECTORY parameters (X_LIMIT and Y_LIMIT are optional).
-10. Run the DataVisualizer Python script.
-11. Measure RPM.
+### FPGA
+This project was developed using Vivado 2022.2 IDE. The "SpectrumAnalyzer" folder in the repository is a project folder which you can open with Vivado. It contains all the files needed to generate a bitstream and program an FPGA. Keep in mind that this project was configured for Arty A7-35 (xc7a35ticsg324-1L) development board. If you have a different board, you will need to configure the project for that particular board.
+### Python script
+SpectrumAnalyzer script was developed using:
+1. Python 3.11.4.
+2. pyserial 3.5
+3. matplotlib 3.7.2
+4. numpy 1.25.2
 
 ## Hardware
 1. Artix 7 35T Arty FPGA Development Board.
@@ -62,15 +59,6 @@ This project consists of three parts:
 <div align="center">
   <i>Fig. 4. Internal circuit block diagram.</i>
 </div>
-
-### DataVisualizer
-DataVisualizer script uses 4 libraries:
-1. pyserial for communication with HC-05.
-2. matplotlib for data plotting.
-3. numpy for temporary data storage in numpy array.
-4. pandas for data export to .csv.
-
-Firstly, the script tries to open a serial port over Bluetooth to receive data from HC-05. If it succeeds, then the graph is configured (figure, labels, grid, etc). After that, an empty graph is displayed, and the script enters a loop and waits for data. The received data is converted to RPM and displayed on screen. Finally, after closing the figure window (click X), the script asks if data should be saved to .csv.
 
 ## Specifications
 * Frequency measurement range: 36.84 to 22105 Hz.
