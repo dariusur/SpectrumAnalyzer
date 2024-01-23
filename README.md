@@ -45,7 +45,7 @@ The system consists of three parts:
 2. Internal hardware (reconfigurable hardware inside the FPGA described by Verilog code).
 3. Software (Python script that runs on PC).
 
-
+An electret microphone is basically a parallel plate capacitor, of which the front plate is used as a diaphragm. When the sound waves hit the diaphragm it vibrates along with the signal. The vibrations change the distance between the two plates which changes the capacitance of the capacitor. This can be detected as a voltage signal. So the microphone converts sound waves into an electrical signal. Typically this signal is very small. For a person talking into the microphone the signal is going to be approximately 20 mV peak-to-peak.
 
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/dataflow_diagram.png">
