@@ -40,10 +40,11 @@ SpectrumAnalyzer script was developed using:
 </div>
 
 ## How it works?
-This project consists of three parts: 
-1. External hardware.
-2. Internal hardware.
-3. Software.
+The system consists of three parts:
+1. External hardware (microphone, amplifier, passive components).
+2. Internal hardware (reconfigurable hardware inside the FPGA described by Verilog code).
+3. Software (Python script that runs on PC).
+
 
 
 <div align="center">
