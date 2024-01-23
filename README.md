@@ -45,7 +45,9 @@ The system consists of three parts:
 2. Internal hardware (reconfigurable hardware inside the FPGA described by Verilog code).
 3. Software (Python script that runs on PC).
 
-An electret microphone is basically a parallel plate capacitor, of which the front plate is used as a diaphragm. When the sound waves hit the diaphragm it vibrates along with the signal. The vibrations change the distance between the two plates which changes the capacitance of the capacitor. This can be detected as a voltage signal. So the microphone converts sound waves into an electrical signal. Typically this signal is very small. For a person talking into the microphone the signal is going to be approximately 20 mV peak-to-peak.
+### External hardware
+External hardware is responsible for sound wave conversion into an electrical signal that can later be sampled by electronics. Electret microphone is used for the conversion, which is basically a parallel plate capacitor, of which the front plate is used as a diaphragm. When the sound waves hit the diaphragm it vibrates along with the signal. The vibrations change the distance between the two plates which changes the capacitance of the capacitor. This can be detected as a voltage signal. Typically the signal is very weak. For a person talking normally into the microphone that was used for the project, the signal amplitude can be something like 40 mV peak-to-peak. For weaker sound sources the amplitude can easily be less that 10 mV peak-to-peak. Such a weak signal firstly needs to be amplified before it can be sampled by the ADC. The amplification is done with a two-stage amplifier, which consists of two LM358P op-amps (Fig. 2). Before the signal is passed to the first stage, the DC component of the signal is blocked with a high-pass filter made from C1 capacitor and R3 resistor. R3 resistor here is important, because without it, the capacitor would still retain some bias, which complicates the biasing of op-amps.
+
 
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/dataflow_diagram.png">
