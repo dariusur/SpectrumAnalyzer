@@ -55,7 +55,7 @@ Fig. 3 shows a simplified block diagram of the internal hardware. Simplified her
 8. DFT - performs discrete Fourier transform, taken from Vivado IP catalog.
 9. RWM (FSM_DFT_UART) - read-write memory that stores processed data from DFT.
 10. modulus - computes modulus of a complex number.
-11. multiplexer - packs data into 8 bit packets.
+11. multiplexer - packs data into 8-bit packets.
 12. UART - implements UART protocol and is responsible for data transmission to the on-board FTDI chip.
 
 <div align="center">
@@ -65,7 +65,9 @@ Fig. 3 shows a simplified block diagram of the internal hardware. Simplified her
   <i>Fig. 3. Internal circuit block diagram (simplified).</i>
 </div>
 <br></br>
-The FPGA is controlled with two on-board push buttons. "BTN0" is the reset button, it stops the measurement and resets the system. "BTN1" is the start button which begins the measurement. When the measurement starts, the ADC will start collecting samples, which are stored in RWM. The storage is controlled by a FSM, which increments the address at which a sample is stored in memory. Once 1200 samples are stored, immediately after, the FSM initiates data transmission to the DFT core. The DFT core accepts real and imaginary data, in this case, only real data is available, so imaginary data is always 0. The DFT computation result, however, will contain imaginary data even if the input of it was 0. The output from DFT is stored in another RWM, which stores 1200 points of real and imaginary data each, as well as the block exponent. The block exponent is the same for the entire frame, so only one memory cell is sufficient to store it. Again, the storage of DFT output data is controlled by another FSM. Once the DFT is done with the data output, the FSM initiates data transmission to the UART module, which sends data to the on-board FTDI chip. Along the way from RWM to the UART chip the data passes through modulus and multiplexer modules. The modulus module computes the modulus of a complex number. It takes only a few clock cycles to compute it and is done during the time when UART is sending data, so there is no delay because of it. The modulus operation essentially combines real and imaginary data, which allows to cut the amount of data transmitted to PC by half. The multiplexer module packs data into 8 bit packets, because the on-board FTDI chip UART interface supports only 7/8 data bits. The UART module sends 12030 bits in total for each data frame (including start and stop bits). This number comes from 601 12-bit data points and a single 4-bit block exponent. Because the imaginary data input to the DFT core is 0, the double-sided FFT spectrum will always be symmetrical around 0 Hz. Therefore, it is sufficient to transmit only half of the modulus computation result, which equals to 601. The additional 1 comes from the fact that this is where the center is. In the end, the PC will receive 1203 bytes of data in total (this is without start and stop bits).
+The FPGA is controlled with two on-board push buttons. "BTN0" is the reset button, it stops the measurement and resets the system. "BTN1" is the start button which begins the measurement. When the measurement starts, the ADC will start collecting samples, which are stored in RWM. The storage is controlled by a FSM, which increments the address at which a sample is stored in memory. Once 1200 samples are stored, immediately after, the FSM initiates data transmission to the DFT core. The DFT core accepts real and imaginary data, in this case, only real data is available, so imaginary data is always 0. The DFT computation result, however, will contain imaginary data even if the input of it was 0. The output from DFT is stored in another RWM, which stores 1200 points of real and imaginary data each, as well as the block exponent. The block exponent is the same for the entire frame, so only one memory cell is sufficient to store it. Again, the storage of DFT output data is controlled by another FSM. Once the DFT is done with the data output, the FSM initiates data transmission to the UART module, which sends data to the on-board FTDI chip. Along the way from RWM to the UART chip the data passes through modulus and multiplexer modules. The modulus module computes the modulus of a complex number. It takes only a few clock cycles to compute it and is done during the time when UART is sending data, so there is no delay because of it. The modulus operation essentially combines real and imaginary data, which allows to cut the amount of data transmitted to PC by half. The multiplexer module packs data into 8-bit packets, because the on-board FTDI chip UART interface supports only 7/8 data bits. The UART module sends 12030 bits in total for each data frame (including start and stop bits). This number comes from 601 12-bit data points and a single 4-bit block exponent. Because the imaginary data input to the DFT core is 0, the double-sided FFT spectrum will always be symmetrical around 0 Hz. Therefore, it is sufficient to transmit only half of the modulus computation result, which equals to 601. The additional 1 comes from the fact that this is where the center is. In the end, the PC will receive 1203 bytes of data in total (this is without start and stop bits).
+
+The data, beginning from the microphone all the way to the PC, undergoes a lot of format conversions. The data format is only converted when it is required for another module. For example: the ADC will sample the voltage present on the analog pin and convert it to a 12-bit integer value (0-4095), however, the DFT accepts input in 2's complement fixed-point number format. In order for the DFT to perform the calculation correctly, the data must be converted into a correct format. The summary of data flow through the system along with all its format conversions is shown in Fig 4.
 
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/dataflow_diagram.png">
@@ -73,6 +75,9 @@ The FPGA is controlled with two on-board push buttons. "BTN0" is the reset butto
 <div align="center">
   <i>Fig. 4. Data flow block diagram.</i>
 </div>
+<br></br>
+
+
 
 ## Installation
 ### FPGA
@@ -83,7 +88,6 @@ SpectrumAnalyzer script was developed using:
 2. pyserial 3.5
 3. matplotlib 3.7.2
 4. numpy 1.25.2
-
 
 ## Issues and notes for further development
 
