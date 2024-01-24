@@ -9,15 +9,10 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
   <i>Fig. 1. One the left: hardware used for the project. On the right: Python script showing measurement of a signal consisting of 1 kHz, 5 kHz and 10 kHz sine waves.</i>
 </div>
 
-## Installation
-### FPGA
-This project was developed using Vivado 2022.2 IDE. The "SpectrumAnalyzer" folder in the repository is a project folder which you can open with Vivado. It contains all the files needed to generate a bitstream and program an FPGA. Keep in mind that this project was configured for Arty A7-35 (xc7a35ticsg324-1L) development board. If you have a different board, you will need to configure the project for that particular board.
-### Python script
-SpectrumAnalyzer script was developed using:
-1. Python 3.11.4.
-2. pyserial 3.5
-3. matplotlib 3.7.2
-4. numpy 1.25.2
+## Specifications
+* Frequency measurement range: 36.84 to 22105 Hz.
+* Resolution: 36.84 Hz.
+* Data rate: 30??? data frames per second (3 Mbits/s).
 
 ## Hardware
 1. Artix 7 35T Arty FPGA Development Board.
@@ -79,10 +74,16 @@ The FPGA is controlled with two on-board push buttons. "BTN0" is the reset butto
   <i>Fig. 4. Data flow block diagram.</i>
 </div>
 
-## Specifications
-* Frequency measurement range: 36.84 to 22105 Hz.
-* Resolution: 36.84 Hz.
-* Data rate: 30??? data frames per second (3 Mbits/s).
+## Installation
+### FPGA
+This project was developed using Vivado 2022.2 IDE. The "SpectrumAnalyzer" folder in the repository is a project folder which you can open with Vivado. It contains all the files needed to generate a bitstream and program an FPGA. Keep in mind that this project was configured for Arty A7-35 (xc7a35ticsg324-1L) development board. If you have a different board, you will need to configure the project for that particular board.
+### Python script
+SpectrumAnalyzer script was developed using:
+1. Python 3.11.4.
+2. pyserial 3.5
+3. matplotlib 3.7.2
+4. numpy 1.25.2
+
 
 ## Issues and notes for further development
 
