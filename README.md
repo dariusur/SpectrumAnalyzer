@@ -33,7 +33,7 @@ SpectrumAnalyzer script was developed using:
 11. 1u capacitor.
 
 <div align="center">
-  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/external_circuit_schematic.png">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/external_circuit_schematic_diagram.png">
 </div>
 <div align="center">
   <i>Fig. 2. SpectrumAnalyzer external circuit schematic diagram.</i>
