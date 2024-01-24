@@ -18,47 +18,45 @@ def bin_decode(data):
 
     return x;
 
-def live_update_demo():
-    #x = np.linspace(0,600, num=601) * 50000 / 1200
+def draw_graph():
     x = np.linspace(0,600, num=601) * X_SCALE_MULTIPLIER
     sample = np.linspace(0.5,0.5, num=601)
 
     fig, ax1 = plt.subplots()
     line, = ax1.plot([], lw=1)
     line.set_data(x, sample)
-    #text = ax1.text(0.8,0.5, "")
+    text = ax1.text(0, 1.02, "")
 
     ax1.set_xlim([0, 22105])
+    #ax1.set_xlim([0, 22105/2]) # half
     ax1.set_ylim([0, 1])
+    ax1.set_xlabel('Frequency, Hz')
+    ax1.set_ylabel('Amplitude')
+    ax1.set_yticks(np.linspace(0,1, num=11))
+    ax1.grid()
     
     fig.canvas.draw()   # note that the first draw comes before setting data 
-
     plt.show(block=False)
-
     fig.canvas.flush_events()
 
-    delay = time.time()
-
     while (True):
+        start = time.time()
         ser_data = ser.read(1203)
         sample = []
-        #multiplier = 2**data[0] / (1200*2048) * 2
         multiplier = 2**ser_data[0] / 1200 * 2
         for i in range(1,1203,2):
             sample.append(bin_decode(ser_data[i:i+2]) * multiplier)
         line.set_data(x, sample)
-        #tx = 'Delay:\n {:.6f}s'.format(delay)
-        #text.set_text(tx)
-
-        # redraw everything
-        fig.canvas.draw()
-
-        fig.canvas.flush_events()
 
         
+        # redraw everything
+        fig.canvas.draw()
+        fig.canvas.flush_events()
+        tx = '{:.2f} fps'.format(1 / (time.time() - start))
+        text.set_text(tx)
+        
 ser = serial.Serial('COM10', 3000000)
-
-live_update_demo()
+draw_graph()
 
 ser.close();
 print("done")
