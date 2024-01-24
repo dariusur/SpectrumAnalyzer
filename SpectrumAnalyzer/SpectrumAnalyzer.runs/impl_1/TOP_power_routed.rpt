@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Mon Jan 22 13:44:34 2024
+| Date             : Wed Jan 24 09:52:21 2024
 | Host             : DESKTOP-7B2FBLM running 64-bit major release  (build 9200)
 | Command          : report_power -file TOP_power_routed.rpt -pb TOP_power_summary_routed.pb -rpx TOP_power_routed.rpx
 | Design           : TOP
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.177        |
+| Total On-Chip Power (W)  | 0.176        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.115        |
+| Dynamic (W)              | 0.114        |
 | Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 99.2         |
@@ -52,21 +52,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.019 |        3 |       --- |             --- |
-| Slice Logic             |     0.026 |     9666 |       --- |             --- |
+| Clocks                  |     0.018 |        3 |       --- |             --- |
+| Slice Logic             |     0.026 |     9656 |       --- |             --- |
 |   LUT as Logic          |     0.020 |     2828 |     20800 |           13.60 |
-|   Register              |     0.003 |     4446 |     41600 |           10.69 |
-|   LUT as Shift Register |     0.002 |      323 |      9600 |            3.36 |
+|   Register              |     0.003 |     4442 |     41600 |           10.68 |
+|   LUT as Shift Register |     0.002 |      324 |      9600 |            3.38 |
 |   CARRY4                |     0.001 |      310 |      8150 |            3.80 |
 |   F7/F8 Muxes           |    <0.001 |        5 |     32600 |            0.02 |
-|   Others                |     0.000 |      645 |       --- |             --- |
-| Signals                 |     0.034 |     7134 |       --- |             --- |
+|   Others                |     0.000 |      643 |       --- |             --- |
+| Signals                 |     0.034 |     7132 |       --- |             --- |
 | Block RAM               |     0.019 |        8 |        50 |           16.00 |
 | DSPs                    |     0.015 |       18 |        90 |           20.00 |
 | I/O                     |    <0.001 |        6 |       210 |            2.86 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | Static Power            |     0.062 |          |           |                 |
-| Total                   |     0.177 |          |           |                 |
+| Total                   |     0.176 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.124 |       0.118 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.124 |       0.117 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,7 +145,7 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| TOP            |     0.115 |
+| TOP            |     0.114 |
 |   FSM_ADC      |     0.004 |
 |     ADC        |     0.002 |
 |     RWM        |     0.002 |

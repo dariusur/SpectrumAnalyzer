@@ -31,37 +31,7 @@ debouncer_0 reset_debouncer (.clk(clk), .btn_in(reset_btn), .btn_out(reset_btn_d
 
 wire rffd, data_ready;
 wire [11:0] dout;
-reg start = 0;
-FSM_ADC FSM_ADC(.clk(clk), .reset(reset_btn_deb), .start(start), .vauxn5(vaux5_n), .vauxp5(vaux5_p), .rffd(rffd), .data_ready(data_ready), .dout(dout));
-FSM_DFT_UART FSM_DFT_UART(.clk(clk), .reset(reset_btn_deb), .start(start), .data_ready(data_ready), .din(dout), .rffd(rffd), .dout(uart_rxd_out));
+FSM_ADC FSM_ADC(.clk(clk), .reset(reset_btn_deb), .start(start_btn_deb), .vauxn5(vaux5_n), .vauxp5(vaux5_p), .rffd(rffd), .data_ready(data_ready), .dout(dout));
+FSM_DFT_UART FSM_DFT_UART(.clk(clk), .reset(reset_btn_deb), .start(start_btn_deb), .data_ready(data_ready), .din(dout), .rffd(rffd), .dout(uart_rxd_out));
 
-// -------------- FINITE-STATE MACHINE CODE START --------------
-// This FSM generates a single clock cycle start pulse.
-// When the start button is pressed wait for it to be released to generate the start signal.
-reg [1:0] state = 0;
-localparam START_0 = 0, START_1 = 1, START_2 = 2; 
-
-always @ (posedge clk) begin
-if (reset_btn_deb) begin
-    start <= 0;
-    state <= START_0;
-end
-else begin
-    case (state) 
-        START_0 : if (start_btn_deb) state <= START_1;
-        START_1 : begin
-            if (!start_btn_deb) begin
-                start <= 1;
-                state <= START_2;  
-            end
-        end
-        START_2 : begin
-            start <= 0;
-            state <= START_0;
-        end
-        default : state <= START_0;
-    endcase
-end
-end
-// -------------- FINITE-STATE MACHINE CODE END --------------
 endmodule
