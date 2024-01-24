@@ -90,8 +90,9 @@ When the FPGA is powered up, it waits for a start signal to begin measurement.
 1. https://vanhunteradams.com/FFT/FFT.html
 2. https://www.algorithm-archive.org/contents/cooley_tukey/cooley_tukey.html
 3. https://web.mit.edu/6.111/www/f2017/handouts/FFTtutorial121102.pdf
-4. https://www.physicsforums.com/threads/relationship-between-frequency-and-power-for-sound.1055900/
-5. https://forum.digilent.com/topic/17096-busbridge3-high-speed-ftdifpga-interface/
-6. https://www.hackster.io/MichalsTC/how-to-use-the-fast-serial-mode-on-a-ftdi-ft2232h-7f0682
-7. https://github.com/WangXuan95/FPGA-ftdi245fifo
-8. https://forum.digilent.com/topic/3213-problem-ft2232-sync-fifo-mode/
+4. https://pages.github.coecis.cornell.edu/jt658/ECE3400_Group9_2019/lab2.html
+5. https://www.physicsforums.com/threads/relationship-between-frequency-and-power-for-sound.1055900/
+6. https://forum.digilent.com/topic/17096-busbridge3-high-speed-ftdifpga-interface/
+7. https://www.hackster.io/MichalsTC/how-to-use-the-fast-serial-mode-on-a-ftdi-ft2232h-7f0682
+8. https://github.com/WangXuan95/FPGA-ftdi245fifo
+9. https://forum.digilent.com/topic/3213-problem-ft2232-sync-fifo-mode/
