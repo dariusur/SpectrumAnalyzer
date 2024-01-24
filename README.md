@@ -86,4 +86,7 @@ When the FPGA is powered up, it waits for a start signal to begin measurement.
 
 ## Issues and notes for further development
 
-
+## References
+1. https://vanhunteradams.com/FFT/FFT.html
+2. https://www.algorithm-archive.org/contents/cooley_tukey/cooley_tukey.html
+3. https://web.mit.edu/6.111/www/f2017/handouts/FFTtutorial121102.pdf
