@@ -78,7 +78,7 @@ The data, beginning from the microphone all the way to the PC, undergoes multipl
 <br></br>
 
 <div align="center">
-  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="600" height="600">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="400" height="400">
 </div>
 <div align="center">
   <i>Fig. 5. Timing diagram.</i>
