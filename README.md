@@ -77,6 +77,14 @@ The data, beginning from the microphone all the way to the PC, undergoes multipl
 </div>
 <br></br>
 
+<div align="center">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png">
+</div>
+<div align="center">
+  <i>Fig. 5. Timing diagram.</i>
+</div>
+<br></br>
+
 ## Installation
 ### FPGA
 This project was developed using Vivado 2022.2 IDE. The "SpectrumAnalyzer" folder in the repository is a project folder which you can open with Vivado. It contains all the files needed to generate a bitstream and program an FPGA. Keep in mind that this project was configured for Arty A7-35 (xc7a35ticsg324-1L) development board. If you have a different board, you will need to configure the project for that particular board.
