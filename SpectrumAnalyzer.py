@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
+# CONSTANTS
 POINTS = 1200 # number of samples
 S_FREQ = 44210 # Hz
 NYQ_FREQ = S_FREQ / 2 # Nyquist frequency (22105 Hz)
@@ -43,9 +44,9 @@ def draw_graph():
         start = time.time()
         ser_data = ser.read(1203)
         sample = []
-        multiplier = 2**ser_data[0] / 1200 * 2
+        y_scale_multiplier = 2**ser_data[0] / POINTS * 2 # normalize by POINTS and scale by 2 because this is only half of the spectrum
         for i in range(1,1203,2):
-            sample.append(bin_decode(ser_data[i:i+2]) * multiplier)
+            sample.append(bin_decode(ser_data[i:i+2]) * y_scale_multiplier)
         line.set_data(x, sample)
 
         
