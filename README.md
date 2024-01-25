@@ -29,7 +29,7 @@ The time required by each process is depicted graphically in the timing diagram 
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="400" height="400">
 </div>
 <div align="center">
-  <i>Fig. 2. Timing diagram.</i>
+  <i>Fig. 2. Timing diagram (timing bars are not to scale).</i>
 </div>
 <br></br>
 
