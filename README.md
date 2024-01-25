@@ -86,7 +86,7 @@ The data, beginning from the microphone all the way to the PC, undergoes multipl
 <br></br>
 
 ### Software
-The script runs in an infinite loop, always waiting for new data. When new data is received, the script decodes it and draws/updates a graph on the screen. The graphs x-axis range spans from 0 to the Nyquist frequency ($f_{Nyquist} = {f_{sample} / 2}$
+The script runs in an infinite loop, always waiting for new data. When new data is received, the script decodes it and draws/updates a graph on the screen. The graphs x-axis range spans from 0 to the Nyquist frequency ($f_{Nyquist} = {f_{sample} \over 2}$
 
 ## Installation
 ### FPGA
