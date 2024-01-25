@@ -12,13 +12,23 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 ## Specifications
 * Frequency measurement range: 36.84 to 22105 Hz.
 * Resolution: 36.84 Hz.
-* Data rate: 30??? data frames per second (3 Mbits/s).
+* Data rate: ~37 data frames per second at 3 Mbits/s.
+* Power source: USB.
+
+Sampling and data processing along with transmission is done in parallel. When the measurement starts, the hardware responsible for data processing waits for the full data frame to be collected by the ADC. This takes 27.14 ms. After that, the processing starts, while the ADC proceeds to collect a new data frame. Data processing consists of:
+1. Data transmission from RWM (read-write memory) to the DFT core (12 us).
+2. DFT core calculation (37.92 us for 1200 points).
+3. DFT output storage to RWM (12 us).
+4. Data transmission via UART (4.01 ms).
+5. Redrawing of the graph on the screen (~23 ms).
+
+The time required by each process is depicted graphically in the timing diagram (Fig. 2). A conclusion can be made that the data rate (frame rate) is determined by the longest process, which is the ADC sampling time. Currently there are a few issues regarding timing, so be sure to check the "Issues and notes for further development" section below.
 
 <div align="center">
   <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="400" height="400">
 </div>
 <div align="center">
-  <i>Fig. 5. Timing diagram.</i>
+  <i>Fig. 2. Timing diagram.</i>
 </div>
 <br></br>
 
@@ -86,7 +96,7 @@ The data, beginning from the microphone all the way to the PC, undergoes multipl
 <br></br>
 
 ### Software
-The script runs in an infinite loop, always waiting for new data. When new data is received, the script decodes it and draws/updates a graph on the screen. Since the data is sent as 8-bit packets, the script recombines two 8-bit packets into one 16-bit packet and then decodes it. At this point, it is assumed that data format is unsigned fixed-point number with 12th bit representing the whole number part (greater bits are all 0's), while the rest of the bits represnt the fractional part. There are four constants defined at the beginning of the script: POINTS, S_FREQ, NYQ_FREQ, X_SCALE_MULTIPLIER. These should not be changed unless you modify the RTL code to support a diffrenet number of points or a different sampling frequency. The X_SCALE_MULTIPLIER ($2 * NYQ\textunderscore FREQ \over POINTS$) defines resolution of the measurement and is used to scale the x-axis, which spans from 0 to the Nyquist frequency $f_{Nyquist} = {f_{sample} \over 2}$. The decoded data is multiplied by $2^{blk_exp}$ to obtain the final data format (unsigned block floating-point number). The data is then normalized by the point size and multiplied by 2 to account for the fact that this is only half of the spectrum. Finally, the data is displayed on the screen as a single-sided DFT spectrum.
+The Python script runs in an infinite loop, always waiting for new data. When new data is received, the script decodes it and draws/updates a graph on the screen. Since the data is sent as 8-bit packets, the script recombines two 8-bit packets into one 16-bit packet and then decodes it. At this point, it is assumed that data format is unsigned fixed-point number with 12th bit representing the whole number part (greater bits are all 0's), while the rest of the bits represnt the fractional part. There are four constants defined at the beginning of the script: POINTS, S_FREQ, NYQ_FREQ, X_SCALE_MULTIPLIER. These should not be changed unless you modify the RTL code to support a diffrenet number of points or a different sampling frequency. The X_SCALE_MULTIPLIER ($2 * NYQ\textunderscore FREQ \over POINTS$) defines resolution of the measurement and is used to scale the x-axis, which spans from 0 to the Nyquist frequency $f_{Nyquist} = {f_{sample} \over 2}$. The decoded data is multiplied by $2^{blk_exp}$ to obtain the final data format (unsigned block floating-point number). The data is then normalized by the point size and multiplied by 2 to account for the fact that this is only half of the spectrum. Finally, the data is displayed on the screen as a single-sided DFT spectrum.
 
 ## Installation
 ### FPGA
