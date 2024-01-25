@@ -14,6 +14,14 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 * Resolution: 36.84 Hz.
 * Data rate: 30??? data frames per second (3 Mbits/s).
 
+<div align="center">
+  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="400" height="400">
+</div>
+<div align="center">
+  <i>Fig. 5. Timing diagram.</i>
+</div>
+<br></br>
+
 ## Hardware
 1. Artix 7 35T Arty FPGA Development Board.
 2. Electret microphone.
@@ -77,13 +85,9 @@ The data, beginning from the microphone all the way to the PC, undergoes multipl
 </div>
 <br></br>
 
-<div align="center">
-  <img src="https://github.com/dariusur/SpectrumAnalyzer/blob/main/drawings/timing_diagram.png" widht="400" height="400">
-</div>
-<div align="center">
-  <i>Fig. 5. Timing diagram.</i>
-</div>
-<br></br>
+### Software
+The script runs in an infinite loop, always waiting for new data. When new data is received, the script decodes it and draws a graph on the screen. 
+
 
 ## Installation
 ### FPGA
