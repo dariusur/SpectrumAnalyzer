@@ -13,6 +13,7 @@ SpectrumAnalyzer is a FPGA based real-time audio spectrum analyzer. It measures 
 * Frequency measurement range: 36.84 to 22105 Hz.
 * Resolution: 36.84 Hz.
 * Data rate: ~37 data frames per second at 3 Mbits/s.
+* Adjustable gain: 0 - 909.
 * Power source: USB.
 
 Sampling and data processing along with transmission is done in parallel. When the measurement starts, the hardware responsible for data processing waits for the full data frame to be collected by the ADC. This takes 27.14 ms. After that, the processing starts, while the ADC proceeds to collect a new data frame. Data processing consists of:
